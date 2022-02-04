@@ -12,7 +12,8 @@ app.use(cors())
 postgres.connect()
 
 //Controllers
-
+const certificatesController = require('./controllers/certificates.js')
+app.use('/certificate', certificatesController)
 
 //Listeners
 app.listen(process.env.PORT || 3000, () => {
